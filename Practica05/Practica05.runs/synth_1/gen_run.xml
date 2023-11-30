@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1700147168">
+  <File Type="PA-TCL" Name="ios.tcl"/>
+  <File Type="REPORTS-TCL" Name="ios_reports.tcl"/>
+  <File Type="RDS-RDS" Name="ios.vds"/>
+  <File Type="RDS-UTIL" Name="ios_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="ios_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="ios.dcp"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/Lab05/led_ctl.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="C:/Users/coqui/Downloads/Lab05/led_ctl.vhd"/>
+        <Attr Name="ImportTime" Val="1542732422"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Lab05/meta_harden.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="C:/Users/coqui/Downloads/Lab05/meta_harden.vhd"/>
+        <Attr Name="ImportTime" Val="1542732368"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Lab05/uart_baud_gen.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="C:/Users/coqui/Downloads/Lab05/uart_baud_gen.vhd"/>
+        <Attr Name="ImportTime" Val="1542732376"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Lab05/uart_led.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="C:/Users/coqui/Downloads/Lab05/uart_led.vhd"/>
+        <Attr Name="ImportTime" Val="1542732386"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Lab05/uart_rx.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="C:/Users/coqui/Downloads/Lab05/uart_rx.vhd"/>
+        <Attr Name="ImportTime" Val="1542732398"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Lab05/uart_rx_ctl.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="C:/Users/coqui/Downloads/Lab05/uart_rx_ctl.vhd"/>
+        <Attr Name="ImportTime" Val="1542732406"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Practica05/uart_top.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/uart_top.vhd"/>
+        <Attr Name="ImportTime" Val="1700146351"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="ios"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/uart_led_pins_ArtyZ7.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/uart_led_pins_ArtyZ7.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

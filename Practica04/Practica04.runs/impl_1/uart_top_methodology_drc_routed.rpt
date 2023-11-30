@@ -1,0 +1,85 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Thu Nov 16 11:18:51 2023
+| Host         : DESKTOP-AKM15S5 running 64-bit major release  (build 9200)
+| Command      : report_methodology -file uart_top_methodology_drc_routed.rpt -pb uart_top_methodology_drc_routed.pb -rpx uart_top_methodology_drc_routed.rpx
+| Design       : uart_top
+| Device       : xc7z010clg400-1
+| Speed File   : -1
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 7
++-----------+----------+--------------------------------------------------------+------------+
+| Rule      | Severity | Description                                            | Violations |
++-----------+----------+--------------------------------------------------------+------------+
+| TIMING-18 | Warning  | Missing input or output delay                          | 1          |
+| XDCC-1    | Warning  | Scoped Clock constraint overwritten with the same name | 1          |
+| XDCC-7    | Warning  | Scoped Clock constraint overwritten on the same source | 1          |
+| XDCH-2    | Warning  | Same min and max delay values on IO port               | 4          |
++-----------+----------+--------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on rxd_pin relative to clock(s) virtual_clock
+Related violations: <none>
+
+XDCC-1#1 Warning
+Scoped Clock constraint overwritten with the same name  
+A new clock constraint create_clock overrides a previous scoped clock constraint with the same name. It is not recommended to override a scoped (typically an IP) clock constraint and could result in unexpected behaviors.
+New: create_clock -period 8.000 -name clk_pin -waveform {0.000 4.000} [get_ports clk_pin] (Source: E:/Facultad/Sistemas Digitales/Practicas/Practica04/Practica04.srcs/constrs_1/imports/Lab04/uart_led_timing_ArtyZ7.xdc (Line: 4))
+Previous: create_clock -period 8.000 [get_ports clk_pin] (Source: e:/Facultad/Sistemas Digitales/Practicas/Practica04/Practica04.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc (Line: 56))
+Related violations: <none>
+
+XDCC-7#1 Warning
+Scoped Clock constraint overwritten on the same source  
+A new clock constraint create_clock overrides a previous scoped clock constraint defined on the same source. It is not recommended to override a scoped (typically an IP) clock constraint and could result in unexpected behaviors.
+New: create_clock -period 8.000 -name clk_pin -waveform {0.000 4.000} [get_ports clk_pin] (Source: E:/Facultad/Sistemas Digitales/Practicas/Practica04/Practica04.srcs/constrs_1/imports/Lab04/uart_led_timing_ArtyZ7.xdc (Line: 4))
+Previous: create_clock -period 8.000 [get_ports clk_pin] (Source: e:/Facultad/Sistemas Digitales/Practicas/Practica04/Practica04.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc (Line: 56))
+Related violations: <none>
+
+XDCH-2#1 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'led_pins[0]' relative to clock virtual_clock for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock virtual_clock 0.000 [get_ports {led_pins[*]}]
+E:/Facultad/Sistemas Digitales/Practicas/Practica04/Practica04.srcs/constrs_1/imports/Lab04/uart_led_timing_ArtyZ7.xdc (Line: 16)
+Related violations: <none>
+
+XDCH-2#2 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'led_pins[1]' relative to clock virtual_clock for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock virtual_clock 0.000 [get_ports {led_pins[*]}]
+E:/Facultad/Sistemas Digitales/Practicas/Practica04/Practica04.srcs/constrs_1/imports/Lab04/uart_led_timing_ArtyZ7.xdc (Line: 16)
+Related violations: <none>
+
+XDCH-2#3 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'led_pins[2]' relative to clock virtual_clock for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock virtual_clock 0.000 [get_ports {led_pins[*]}]
+E:/Facultad/Sistemas Digitales/Practicas/Practica04/Practica04.srcs/constrs_1/imports/Lab04/uart_led_timing_ArtyZ7.xdc (Line: 16)
+Related violations: <none>
+
+XDCH-2#4 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'led_pins[3]' relative to clock virtual_clock for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock virtual_clock 0.000 [get_ports {led_pins[*]}]
+E:/Facultad/Sistemas Digitales/Practicas/Practica04/Practica04.srcs/constrs_1/imports/Lab04/uart_led_timing_ArtyZ7.xdc (Line: 16)
+Related violations: <none>
+
+
